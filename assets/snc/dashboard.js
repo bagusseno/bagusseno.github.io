@@ -39,7 +39,24 @@
       var gradientStrokeFill_2 = salesChartCanvas.createLinearGradient(0, 0, 0, 400);
       gradientStrokeFill_2.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
       gradientStrokeFill_2.addColorStop(0, '#14c671');
-      var data_1_1 = [60, 75, 65, 130, 130, 145, 110, 145, 155, 149, 170];
+      var data_1_1 = [
+        {y: 60, x: '2022-01-01'}, 
+        {y:75, x: '2022-01-07'}, 
+        {y:65, x: '2022-01-14'}, 
+        {y:130, x: '2022-01-21'}, 
+        {y:130, x: '2022-01-28'}, 
+        {y:75, x: '2022-02-07'}, 
+        {y:120, x: '2022-02-17'}, 
+        {y:46, x: '2022-02-27'},
+        {y: 60, x: '2022-03-01'}, 
+        {y:75, x: '2022-03-07'}, 
+        {y:65, x: '2022-03-14'}, 
+        {y:130, x: '2022-03-21'}, 
+        {y:130, x: '2022-03-22'}, 
+        {y:75, x: '2022-03-24'}, 
+        {y:120, x: '2022-03-27'}, 
+        {y:46, x: '2022-03-30'},
+      ];
       var data_1_2 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
 
       var data_2_1 = [130, 145, 155, 60, 75, 65, 130, 110, 145, 149, 170];
@@ -51,7 +68,7 @@
       var data_4_1 = [130, 145, 65, 130, 75, 145, 149, 170, 110, 155, 60];
       var data_4_2 = [0, 70, 90, 25, 40, 20, 94, 110, 135, 70, 49, 52];
       var areaData = {
-        labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
+        // labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
         datasets: [{
           label: 'CPU',
           data: data_1_1,
@@ -97,10 +114,12 @@
           return text.join("");
         },
         scales: {
-          xAxes: [{
-            display: false,
+          xAxes: [{            
+            display: true,
             ticks: {
-              display: false,
+              max: 200,
+              min: 0,
+              display: true,
               beginAtZero: false
             },
             gridLines: {
