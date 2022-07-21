@@ -168,125 +168,123 @@
         </div>
         <!-- partial -->
         <div class="main-panel">
-          <div class="content-wrapper">
-            <!-- Page Title Header Starts-->           
-            <div class="page">
-              <div class="row page-title-header">
-                <div class="col-12">
-                  <div class="page-header">
-                    <h4 class="page-title">Report</h4>
-                    <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                      <ul class="quick-links ms-auto">
-                        <li><a>Performance Data</a></li>
-                        <li><a>Availability</a></li>
-                        <li><a>Statistics</a></li>
+          <!-- Page Title Header Starts-->           
+          <div class="page content-wrapper">
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="page-title">Report</h4>
+                  <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+                    <ul class="quick-links ms-auto">
+                      <li><a>Performance Data</a></li>
+                      <li><a>Availability</a></li>
+                      <li><a>Statistics</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h3 class="page-title text-center">Performance Analysis Report</h3>
+              </div>
+            </div>
+            <!-- Page Title Header Ends-->
+            
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Service Performance & Analysis Scope</h4>
+                    <p>This summarizes the findings of the report & analysis of the service over Sunday period, together with recommendations and observations for follow up action where applicable.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Analysis Scope of Serviced Inventory</h4>
+                    <p>The devices under monitoring, support and manage are as follows:</p>
+                    <p>
+                      <ul>
+                        <li>
+                          Hostname: SPOKE1
+                        </li>
+                        <li>
+                          Serial Number: FG30EG3G14831840
+                        </li>
+                        <li>
+                          IP Address: 10.0.20.151
+                        </li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <h3 class="page-title text-center">Performance Analysis Report</h3>
-                </div>
-              </div>
-              <!-- Page Title Header Ends-->
-              
-              <div class="row">              
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Service Performance & Analysis Scope</h4>
-                      <p>This summarizes the findings of the report & analysis of the service over Sunday period, together with recommendations and observations for follow up action where applicable.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row">              
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Analysis Scope of Serviced Inventory</h4>
-                      <p>The devices under monitoring, support and manage are as follows:</p>
-                      <p>
-                        <ul>
-                          <li>
-                            Hostname: SPOKE1
-                          </li>
-                          <li>
-                            Serial Number: FG30EG3G14831840
-                          </li>
-                          <li>
-                            IP Address: 10.0.20.151
-                          </li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="page">
-              <div class="row">              
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title mb-0">CPU Utilization</h4>
-                      <div class="d-flex flex-column flex-lg-row">
-                        <p>The graph below illustrate the trend.</p>                      
-                      </div>                    
-                      <canvas class="mt-5" height="120" id="sales-statistics-overview"></canvas>
-                      <h5 class="mt-5">Recommendations</h5>
-                      <p>CPU Utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated for possible causes such as certain traffic peaks or specific traffic types, or even DDOS attacks; also by investigating CPU utilization per process with monitoring tools.</p>
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
+          </div> 
 
-            <div class="page">
-              <div class="row">              
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title mb-0">Memory Utilization</h4>
-                      <div class="d-flex flex-column flex-lg-row">
-                        <p>The graph below illustrate the trend.</p>                      
-                      </div>                    
-                      <canvas class="mt-5" height="120" id="sales-statistics-overview-2"></canvas>
-                      <h5 class="mt-5">Recommendations</h5>
-                      <p>Memory utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated by reviewing memory utilization per process. The device need to normally operate below 80% memory utilization, as the device begins selfpreservation actions as the memory utilization increases beyond 80%.</p>
-                    </div>
+          <div class="page content-wrapper">
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title mb-0">CPU Utilization</h4>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <p>The graph below illustrate the trend.</p>                      
+                    </div>                    
+                    <canvas class="mt-5" height="120" id="sales-statistics-overview"></canvas>
+                    <h5 class="mt-5">Recommendations</h5>
+                    <p>CPU Utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated for possible causes such as certain traffic peaks or specific traffic types, or even DDOS attacks; also by investigating CPU utilization per process with monitoring tools.</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="page">
-              <div class="row">              
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title mb-0">Session Utilization</h4>
-                      <div class="d-flex flex-column flex-lg-row">
-                        <p>The graph below illustrate the trend.</p>                      
-                      </div>                    
-                      <canvas class="mt-5" height="120" id="sales-statistics-overview-3"></canvas>
-                      <h5 class="mt-5">Recommendations</h5>
-                      <p>The measured session data for device should be compared against the device's specified performance data. If the measured session data is tending towards these performance limits, then the solution capacity should be reviewed together with your technical and sales representatives. Performance data is available on device datasheets.</p>
-                    </div>
+          <div class="page content-wrapper">
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title mb-0">Memory Utilization</h4>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <p>The graph below illustrate the trend.</p>                      
+                    </div>                    
+                    <canvas class="mt-5" height="120" id="sales-statistics-overview-2"></canvas>
+                    <h5 class="mt-5">Recommendations</h5>
+                    <p>Memory utilization is expected to follow a trend aligned to business schedules. Multiple high usage peaks that breach thresholds should be investigated by reviewing memory utilization per process. The device need to normally operate below 80% memory utilization, as the device begins selfpreservation actions as the memory utilization increases beyond 80%.</p>
                   </div>
                 </div>
               </div>
-              <!-- partial:../../partials/_footer.html -->
-              <footer class="footer">
-                <div class="container-fluid clearfix">
-                  <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2022 <a href="https://esensi.com/" target="_blank">SNC</a>. All rights reserved.</span>
-                  <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Collaborative Partner to Excel
-                  </span>
-                </div>
-              </footer>
             </div>
+          </div>
+
+          <div class="page content-wrapper">
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title mb-0">Session Utilization</h4>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <p>The graph below illustrate the trend.</p>                      
+                    </div>                    
+                    <canvas class="mt-5" height="120" id="sales-statistics-overview-3"></canvas>
+                    <h5 class="mt-5">Recommendations</h5>
+                    <p>The measured session data for device should be compared against the device's specified performance data. If the measured session data is tending towards these performance limits, then the solution capacity should be reviewed together with your technical and sales representatives. Performance data is available on device datasheets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="container-fluid clearfix">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2022 <a href="https://esensi.com/" target="_blank">SNC</a>. All rights reserved.</span>
+                <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Collaborative Partner to Excel
+                </span>
+              </div>
+            </footer>
           </div>
           <!-- content-wrapper ends -->          
           <!-- partial -->
