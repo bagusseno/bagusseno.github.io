@@ -42,9 +42,11 @@
       .page-footer {
         position: absolute;
         bottom: 16px; 
-        left: 0;
+        left: 1.7rem;
         right: 1.7rem;
         text-align: right;
+        display: flex;
+        justify-content: space-between;
       }
       .page-content {
         margin-top: 16px;
@@ -216,6 +218,50 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
+                    <h4 class="card-title">Summary</h4>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                              <th>No</th>
+                              <th>Device Name</th>
+                              <th>CPU</th>
+                              <th>Memory</th>
+                              <th>Session</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>Device 1</td>
+                              <td>3%</td>
+                              <td>60%</td>
+                              <td>34,512</td>
+                          </tr>
+                          <tr>
+                              <td>2</td>
+                              <td>Device 2</td>
+                              <td>4%</td>
+                              <td>43%</td>
+                              <td>32,452</td>
+                          </tr>
+                          <tr>
+                              <td>3</td>
+                              <td>Device 3</td>
+                              <td>8%</td>
+                              <td>78%</td>
+                              <td>56,223</td>
+                          </tr>                        
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <div class="row">              
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
                     <h4 class="card-title">Analysis Scope of Serviced Inventory</h4>
                     <p>The devices under monitoring, support and manage are as follows:</p>
                     <p>
@@ -290,17 +336,8 @@
               </div>
             </div>
             <!-- test -->
-            <!-- partial:../../partials/_footer.html -->
-            <footer class="footer">
-              <div class="container-fluid clearfix">
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2022 <a href="https://esensi.com/" target="_blank">SNC</a>. All rights reserved.</span>
-                <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Collaborative Partner to Excel
-                </span>
-              </div>
-            </footer>
           </div>
           <!-- content-wrapper ends -->          
-          <!-- partial -->
         </div>
         <!-- main-panel ends -->
       </div>
@@ -335,36 +372,55 @@
     <script src="../../../assets/js/demo_1/dashboard_2.js"></script>
     <!-- End custom js for this page -->
     <script>
+        const documentTitle = 'Performance Analysis Report';
+
         $('.page').each((k, v) =>
         {
-            // insert current content to a div content
+            // >>>>>>>>>>>>>> Start of inserting current content to a div content
+
             const contents = $(v).contents();
             const content = document.createElement('div');
             content.className = 'page-content';
             $(content).append(contents);
             $(v).empty();
             $(v).append(content);
-            
-            // Start of creating footer for each page
+
+            // <<<<<<<<<<<<<< End of inserting current content to a div content
+
+
+            // >>>>>>>>>>>>>> Start of creating footer for each page
+
             const footer = document.createElement('div');
             footer.className = 'page-footer';
-            footer.innerHTML = 'Page ' + ++k + ' of ' + $('.page').length;        
+
+            const leftFooter = document.createElement('div');
+            leftFooter.innerHTML = documentTitle;
+            
+            const rightFooter = document.createElement('div');        
+            rightFooter.innerHTML = 'Page ' + ++k + ' of ' + $('.page').length;        
+
+            $(footer).append(leftFooter);
+            $(footer).append(rightFooter);
 
             $(v).append(footer);
-            // End of creating footer for each page
 
-            // Start of creating header for each page
+            // <<<<<<<<<<<<<< End of creating footer for each page
+
+            
+            // >>>>>>>>>>>>>> Start of creating header for each page
+
             const header = document.createElement('div');
             const logo = document.createElement('img');
             logo.src = '../../../assets/images/snc/logo.jpeg';
-            logo.width = 32;            
+            logo.width = 64;            
 
             header.className = 'page-header';
             
             $(header).append(logo);
 
             $(v).prepend(header);
-            // End of creating header for each page
+
+            // <<<<<<<<<<<<<< End of creating header for each page
         })
     </script>
   </body>
